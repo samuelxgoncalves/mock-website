@@ -1,4 +1,22 @@
 @charset 'UTF-8';
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+:root {
+    --title-font: 'DM Sans', sans-serif;
+    --body-font: 'Source Sans Pro', sans-serif;
+
+    --bg-color: #2e6d6d;
+    --cont-color: #273536;
+    --title-color: #b1e7e2;
+    --title2-color: #38758d;
+    --font-color: #bed3d4;
+}
 
 * {
     padding: 0px;
@@ -6,21 +24,103 @@
 }
 
 body {
+
+}
+
+main {
+    background-color: var(--bg-color);
+    width: 100vw;
     height: 200vh;
 }
 
 div#search-bar {
-    position: sticky;
+    position: fixed;
     top: 0;
-    background-color: rgb(41, 41, 41);
+    background-color: var(--cont-color);
     color: white;
     width: 100%;
     height: 45px;
     margin: auto;
-
     text-align: center;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 div#left-container {
-    posi
+    position: fixed;
+    top: 0px;
+    background-color: var(--cont-color);
+    width: 290px;
+    height: 100vh;
+    box-shadow: 1px 45px 5px rgba(0, 0, 0, 0.25);
+    overflow-y: scroll;
+}
+
+div#left-container img {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-53%, 0%);
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(190, 213, 255, 0.15);
+}
+
+div#left-container nav {
+    position: absolute;
+    top: 220px;
+    left: 35%;
+    transform: translate(-50%, 0%);
+}
+
+div#left-container nav p {
+    color: var(--title2-color);
+    font-family: var(--title-font);
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+div#left-container nav a {
+    display: block;
+    color: var(--font-color);
+    font-family: var(--body-font);
+    font-size: 1em;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    padding: 7px 5px;
+    margin: 5px 17px;
+    border-radius: 5px;
+}
+
+div#left-container nav a:last-child {
+    color: #768383;
+}
+
+div#left-container nav div#menu-items {
+    margin-bottom: 45px;
+}
+
+div#left-container nav div#trending-items {
+    margin-bottom: 80px;
+}
+
+
+
+div#left-container div#preferences {
+    position: sticky;
+    top: 96%;
+    left: 50%;
+    width: 100%;
+    background-color: var(--cont-color);
+    text-align: center;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(190, 213, 255, 0.15);
+}
+
+div#left-container div#preferences a {
+    color: rgb(79, 103, 129);
+    font-family: var(--title-font);
+    font-size: 1.1em;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
