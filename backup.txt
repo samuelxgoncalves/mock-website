@@ -1,0 +1,5 @@
+--bg-color: #2e545f;
+    --cont-color: #273435;
+    --title-color: #b1e7e2;
+    --title2-color: #38758d;
+    --font-color: #bed3d4;
