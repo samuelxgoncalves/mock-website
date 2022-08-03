@@ -57,7 +57,7 @@ div#left-container {
 
 div#left-container img {
     position: absolute;
-    top: 20px;
+    top: 30px;
     left: 50%;
     transform: translate(-53%, 0%);
     padding-bottom: 20px;
@@ -67,7 +67,7 @@ div#left-container img {
 div#left-container nav {
     position: absolute;
     top: 220px;
-    left: 35%;
+    left: 30%;
     transform: translate(-50%, 0%);
 }
 
@@ -77,22 +77,44 @@ div#left-container nav p {
     font-size: 1.5em;
     font-weight: bold;
     letter-spacing: 2px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.35);
 }
 
 div#left-container nav a {
+    position: relative;
     display: block;
     color: var(--font-color);
     font-family: var(--body-font);
     font-size: 1em;
     text-decoration: none;
     letter-spacing: 0.5px;
-    padding: 7px 5px;
-    margin: 5px 17px;
+    padding: 7px 0px;
+    margin: 5px 0px 5px 13px;
     border-radius: 5px;
+    transition: .2s ease-in-out;
 }
 
 div#left-container nav a:last-child {
     color: #768383;
+}
+
+div#left-container nav a:hover {
+    color: white;
+    letter-spacing: 1px;
+}
+
+div#left-container nav a span {
+    position: absolute;
+    top: 90%;
+    width: 0px;
+    height: 2px;
+    background-color: var(--title2-color);
+    border-radius: 5px;
+    transition: .3s ease-in-out;
+}
+
+div#left-container nav a:hover span {
+    width: 120px;
 }
 
 div#left-container nav div#menu-items {
@@ -118,7 +140,7 @@ div#left-container div#preferences {
 }
 
 div#left-container div#preferences a {
-    color: rgb(79, 103, 129);
+    color: var(--title2-color);
     font-family: var(--title-font);
     font-size: 1.1em;
     text-decoration: none;
