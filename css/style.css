@@ -288,7 +288,7 @@ div#messages div.message {
     top: 15px;
     left: 10px;
     width: 90%;
-    margin-bottom: 5px;
+    margin-bottom: -7px;
     cursor: pointer;
 }
 
@@ -317,7 +317,6 @@ div#messages div#new-message:hover p {
     text-decoration: underline;
 }
 
-
 div#messages div.message:last-child {
     margin-bottom: 15px;
 }
@@ -328,8 +327,14 @@ div#messages div.message:hover p {
 }
 
 div#messages div.message img {
+    box-sizing: border-box;
+    border: 5px solid transparent;
     transform: scale(0.65, 0.65);
     border-radius: 50%;
+}
+
+div#messages div.message img.story {
+    border: 4px solid var(--title-color);
 }
 
 div#messages div.message p {
@@ -352,6 +357,92 @@ div#friends {
     height: 320px;
     margin-bottom: -50px;
 }
+
+div#friends div.friend {
+    position: relative;
+    top: 15px;
+    left: 10px;
+    width: 90%;
+    margin-bottom: -7px;
+    cursor: pointer;
+}
+
+div#friends div#new-friend {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    transition: .1s ease-in-out;
+}
+
+div#friends div#new-friend img {
+    transform: scale(0.55, 0.55);
+    border-radius: 0%;
+    transition: .2s ease-in-out;
+}
+
+div#friends div#new-friend:hover {
+    border: 1px solid var(--title2-color);
+}
+
+div#friends div#new-friend:hover img {
+    transform: scale(0.55, 0.55);
+    filter: invert(100%);
+}
+
+div#friends div#new-friend:hover p {
+    text-decoration: underline;
+}
+
+div#friends div.friend:last-child {
+    margin-bottom: 15px;
+}
+
+div#friends div.friend:hover p {
+    color: rgb(230, 230, 230);
+    transition: .15s ease;
+}
+
+div#friends div.friend img {
+    box-sizing: border-box;
+    border: 5px solid transparent;
+    transform: scale(0.65, 0.65);
+    border-radius: 50%;
+}
+
+div#friends div.friend img.story {
+    border: 4px solid var(--title-color);
+}
+
+div#friends div.friend p {
+    position: absolute;
+    top: 50%;
+    left: 75px;
+    width: max-content;
+    color: var(--font-color);
+    font-family: var(--body-font);
+    font-size: 0.9em;
+    transform: translate(0%, -50%);
+}
+
+div#friends div.friend p span {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    transform: translate(0%, -50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+div#friends div.friend p span.offline {
+    background-color: rgb(100, 100, 100);
+}
+
+div#friends div.friend p span.online {
+    background-color: rgb(31, 235, 31);
+}
+
+
 
 div#search-friends {
     position: sticky;
