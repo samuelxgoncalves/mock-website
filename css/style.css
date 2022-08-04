@@ -25,10 +25,15 @@
     height: 0px;
 }
 
-main {
+body {
     background-color: var(--bg-color);
+    background: url('../images/bg-wallpaper-horizontal.jpg') center center/cover no-repeat;
+}
+
+main {
+    backdrop-filter: blur(15px);
     width: 100vw;
-    height: 200vh;
+    height: 100vh;
 }
 
 div.container {
@@ -76,7 +81,7 @@ div#left-container nav {
 div#left-container nav p {
     color: var(--title2-color);
     font-family: var(--title-font);
-    font-size: 1.5em;
+    font-size: 1.55em;
     font-weight: bold;
     letter-spacing: 2px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
@@ -225,17 +230,20 @@ div#actions div#profile-menu {
     right: 18px;
 }
 
-div#actions div#profile-menu p a {
+div#actions div#profile-menu p {
+    position: relative;
     color: var(--title2-color);
     font-family: var(--title-font);
     text-decoration: none;
+    border-bottom: 30px solid transparent;
+    cursor: pointer;
     transition: .2s ease-in-out;
 }
 
-div#actions div#profile-menu p a span {
+div#actions div#profile-menu p span#menu-tool {
     position: absolute;
     top: 50%;
-    right: -10px;
+    right: -25px;
     transform: translate(-50%, -50%);
     width: 0;
     height: 0;
@@ -244,18 +252,37 @@ div#actions div#profile-menu p a span {
     border-right: 5px solid transparent;
 }
 
-div#actions div#profile-menu p a:hover {
+div#actions div#profile-menu p:hover {
     color: var(--title-color);
     text-decoration: underline;
+}
+
+div#actions div#profile-menu p:hover span#menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+div#actions div#profile-menu p span#menu {
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: -20px;
+    width: 225px;
+    height: 380px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 7px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s;
 }
 
 div.vgroup {
     position: absolute;
     left: 50%;
-    width: 90%;
+    width: 95%;
     transform: translate(-50%, 0%);
     background-color: var(--bg-color);
-    border-radius: 7px;
+    border-radius: 5px;
     overflow-y: scroll;
 }
 
@@ -265,17 +292,18 @@ div#right-container p.title {
     width: fit-content;
     color: var(--title2-color);
     font-family: var(--body-font);
-    font-size: 1.3em;
+    font-size: 1.2em;
     letter-spacing: 1px;
-    user-select: none;
 }
 
 div#right-container p#tmessages {
     top: 36px;
 }
 
-div#right-container p#tfriends {
-    top: 474px;
+div#right-container p#tmessages span {
+    color: var(--font-color);
+    font-size: 0.65em;
+    padding-left: 3px;
 }
 
 div#messages {
@@ -287,7 +315,7 @@ div#messages div.message {
     position: relative;
     top: 15px;
     left: 10px;
-    width: 90%;
+    width: 95%;
     margin-bottom: -7px;
     cursor: pointer;
 }
@@ -317,6 +345,11 @@ div#messages div#new-message:hover p {
     text-decoration: underline;
 }
 
+div#messages div.message.unread p {
+    color: #cfcfcf;
+    font-weight: bold;
+}
+
 div#messages div.message:last-child {
     margin-bottom: 15px;
 }
@@ -334,7 +367,7 @@ div#messages div.message img {
 }
 
 div#messages div.message img.story {
-    border: 4px solid var(--title-color);
+    border: 4px solid var(--title2-color);
 }
 
 div#messages div.message p {
@@ -352,6 +385,16 @@ div#messages div.message p span {
     display: block;
 }
 
+div#right-container p#tfriends {
+    top: 474px;
+}
+
+div#right-container p#tfriends span {
+    color: var(--font-color);
+    font-size: 0.65em;
+    padding-left: 5px;
+}
+
 div#friends {
     top: 580px;
     height: 320px;
@@ -362,7 +405,7 @@ div#friends div.friend {
     position: relative;
     top: 15px;
     left: 10px;
-    width: 90%;
+    width: 95%;
     margin-bottom: -7px;
     cursor: pointer;
 }
@@ -410,7 +453,7 @@ div#friends div.friend img {
 }
 
 div#friends div.friend img.story {
-    border: 4px solid var(--title-color);
+    border: 4px solid var(--title2-color);
 }
 
 div#friends div.friend p {
@@ -460,7 +503,7 @@ div#search-friends img {
     top: 50%;
     left: 90%;
     transform: translate(-50%, -50%);
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
 }
