@@ -155,7 +155,7 @@ div#preferences a {
 }
 
 div#preferences a:hover {
-    color: #d9e4ac;
+    color: #80a57a;
 }
 
 /* RIGHT CONTAINER*/
@@ -183,6 +183,11 @@ div#actions div#icons {
 
 div#actions div#icons a {
     margin-right: 15px;
+}
+
+div#actions div#icons a img {
+    width: 16px;
+    height: 16px;
 }
 
 div#actions div#icons:first-child {
