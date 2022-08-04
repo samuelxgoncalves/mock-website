@@ -60,7 +60,7 @@ div#left-container img {
 
 div#left-container div.lc-divider {
     position: absolute;
-    top: 185px;
+    top: 175px;
     width: 100%;
     height: 1px;
     background-color: rgba(172, 172, 172, 0.25);
@@ -68,7 +68,7 @@ div#left-container div.lc-divider {
 
 div#left-container nav {
     position: absolute;
-    top: 220px;
+    top: 200px;
     left: 35%;
     transform: translate(-50%, 0%);
 }
@@ -102,6 +102,10 @@ div#left-container nav a:last-child {
 
 div#left-container nav a:hover {
     color: white;
+}
+
+div#left-container nav a:hover img {
+    transform: translate(-80%, 0%);
 }
 
 div#left-container nav a img {
