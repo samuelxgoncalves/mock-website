@@ -178,6 +178,7 @@ div#right-container {
     box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.25);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    padding-bottom: -40px;
 }
 
 div#actions {
@@ -348,7 +349,8 @@ div#messages div.message p span {
 
 div#friends {
     top: 580px;
-    height: 600px;
+    height: 320px;
+    margin-bottom: -50px;
 }
 
 div#search-friends {
