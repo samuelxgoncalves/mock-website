@@ -130,12 +130,20 @@ nav div#menu-items {
 }
 
 nav div#trending-items {
-    margin-bottom: 80px;
+    margin-bottom: 45px;
+}
+
+nav div#shortcut-items {
+    margin-bottom: 100px;
+}
+
+nav div#shortcut-items a:last-child {
+    color: var(--font-color);
 }
 
 div#preferences {
     position: sticky;
-    top: 96%;
+    top: 97%;
     left: 50%;
     width: 100%;
     background-color: var(--cont-color);
