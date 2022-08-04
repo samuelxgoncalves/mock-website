@@ -8,8 +8,8 @@
     --title-font: 'DM Sans', sans-serif;
     --body-font: 'Source Sans Pro', sans-serif;
 
-    --bg-color: #2e2e2e;
-    --cont-color: #262525;
+    --bg-color: #38383854;
+    --cont-color: #262525d7;
     --title-color: #b1e7e2;
     --title2-color: #b8c293;
     --font-color: #bbbbbb;
@@ -31,7 +31,7 @@ body {
 }
 
 main {
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(25px);
     width: 100vw;
     height: 100vh;
 }
@@ -45,7 +45,9 @@ div.container {
 }
 
 
-/*LEFT CONTAINER*/
+/*
+    LEFT CONTAINER
+*/
 div#left-container {
     z-index: 1;
     left: 0px;
@@ -176,11 +178,30 @@ div#preferences a:hover {
     color: #80a57a;
 }
 
-/* RIGHT CONTAINER*/
+/* 
+    MAIN CONTENT
+*/
+
+div#content {
+    position: relative;
+    min-width: 20%;
+    max-width: 68%;
+    height: 300px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: #26252544;
+}
+
+
+
+
+/* 
+    RIGHT CONTAINER
+*/
 div#right-container {
     right: 0px;
-    width: 250px;
-    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.25);
+    width: 290px;
+    box-shadow: -1px 1px 5px var(--cont-color);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding-bottom: -40px;
@@ -351,7 +372,7 @@ div#messages div.message.unread p {
 }
 
 div#messages div.message:last-child {
-    margin-bottom: 15px;
+    margin-bottom: 100px;
 }
 
 div#messages div.message:hover p {
@@ -398,7 +419,6 @@ div#right-container p#tfriends span {
 div#friends {
     top: 580px;
     height: 320px;
-    margin-bottom: -50px;
 }
 
 div#friends div.friend {
@@ -437,7 +457,7 @@ div#friends div#new-friend:hover p {
 }
 
 div#friends div.friend:last-child {
-    margin-bottom: 15px;
+    margin-bottom: 100px;
 }
 
 div#friends div.friend:hover p {
@@ -490,8 +510,8 @@ div#friends div.friend p span.online {
 div#search-friends {
     position: sticky;
     top: 95%;
-    left: 5%;
-    width: 90%;
+    left: 3%;
+    width: 95%;
     height: 40px;
     justify-content: center;
     background-color: var(--title2-color);
