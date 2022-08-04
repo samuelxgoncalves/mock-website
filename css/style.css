@@ -291,6 +291,32 @@ div#messages div.message {
     cursor: pointer;
 }
 
+div#messages div#new-message {
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    transition: .1s ease-in-out;
+}
+
+div#messages div#new-message img {
+    transform: scale(0.55, 0.55);
+    border-radius: 0%;
+    transition: .1s ease-in-out;
+}
+
+div#messages div#new-message:hover {
+    border: 1px solid var(--title2-color);
+}
+
+div#messages div#new-message:hover img {
+    transform: rotateX(5deg) rotateZ(45deg) scale(0.55, 0.55);
+}
+
+div#messages div#new-message:hover p {
+    text-decoration: underline;
+}
+
+
 div#messages div.message:last-child {
     margin-bottom: 15px;
 }
@@ -303,21 +329,6 @@ div#messages div.message:hover p {
 div#messages div.message img {
     transform: scale(0.65, 0.65);
     border-radius: 50%;
-}
-
-div#messages div#new-message {
-    border: 1px solid var(--title2-color);
-    border-radius: 7px;
-}
-
-div#messages div#new-message:hover img {
-    transform: rotateX(5deg) rotateZ(45deg) scale(0.55, 0.55);
-}
-
-div#messages div#new-message img {
-    transform: scale(0.55, 0.55);
-    border-radius: 0%;
-    transition: .15s ease-in-out;
 }
 
 div#messages div.message p {
