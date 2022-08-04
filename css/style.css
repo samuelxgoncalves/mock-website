@@ -195,7 +195,7 @@ div#actions div#icons a:last-child {
 }
 
 div#actions div#icons a:hover img {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.15, 1.15);
 }
 
 div#actions div#profile-menu {
