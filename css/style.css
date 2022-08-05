@@ -186,12 +186,98 @@ div#content {
     position: relative;
     min-width: 20%;
     max-width: 68%;
-    height: 300px;
+    height: 100vh;
     left: 50%;
     transform: translate(-50%, 0%);
     background-color: #26252544;
 }
 
+div#content div#profile {
+    position: relative;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 95%;
+    height: 399px;
+    background-color: var(--cont-color);
+    background: url('../images/profile-header.jpg') center center/cover no-repeat;
+    border-radius: 5px;
+}
+
+div#content div#profile img#profile {
+    position: absolute;
+    top: 270px;
+    left: 150px;
+    width: 192px;
+    height: 192px;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.35);
+    border: 3px solid var(--title2-color);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+div#content div#profile h2 {
+    position: absolute;
+    top: 280px;
+    left: 265px;
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-weight: normal;
+}
+
+div#content div#profile div#bar {
+    position: relative;
+    top: 364px;
+    transform: translate(0%, -50%);
+    width: 100%;
+    height: 70px;
+    background-color: var(--cont-color);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+div#content div#profile div#bar a {
+    position: relative;
+    top: 24%;
+    left: 270px;
+    color: var(--title2-color);
+    font-family: var(--body-font);
+    font-size: 1.3em;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 16px 15px 27px 15px;
+    border-radius: 1px;
+    margin-right: -3px;
+    transition: .15s ease-in-out;
+}
+
+div#content div#profile div#bar a:first-child {
+    background-color: #383636ec;
+}
+
+div#content div#profile div#bar a:first-child span {
+    width: 101%;
+    height: 3px;
+}
+
+div#content div#profile div#bar a:hover {
+    background-color: #383636ec;
+}
+
+div#content div#profile div#bar a span {
+    position: absolute;
+    width: 101%;
+    height: 0px;
+    bottom: 0;
+    left: 0px;
+    background: var(--title-color);
+    transition: .2s ease-in;
+}
+
+div#content div#profile div#bar a:hover span {
+    height: 3px;
+}
 
 
 
@@ -302,8 +388,8 @@ div.vgroup {
     left: 50%;
     width: 95%;
     transform: translate(-50%, 0%);
-    background-color: var(--bg-color);
-    border-radius: 5px;
+    background-color: #38363677;
+    border-radius: 3px;
     overflow-y: scroll;
 }
 
